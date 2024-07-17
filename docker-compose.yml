@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  db:
+    container_name: ecommerce_practice
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: ecommerce
+      POSTGRES_USER: super_admin
+      POSTGRES_PASSWORD: SomeSecretPassword
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres-db:
+    driver: local
